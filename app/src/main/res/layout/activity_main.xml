@@ -12,17 +12,18 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="3dp"
+
         android:background="#333333"
+        android:layout_margin=".1dp"
 
         android:scaleType="fitXY"
-        android:scaleX=".99999999999"
-        android:scaleY=".999999999999999"
-        app:layout_constraintBottom_toTopOf="@id/shareButton"
+
+        app:layout_constraintBottom_toTopOf="@id/shareMeme"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -34,13 +35,11 @@
         app:layout_constraintRight_toRightOf="@id/imageView"/>
 
     <Button
-        android:id="@+id/shareButton"
+        android:id="@+id/shareMeme"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginBottom="3dp"
-        android:background="#333333"
+        android:layout_margin=".1dp"
+        android:background="#3b5998"
         android:onClick="shareMeme"
         android:padding="32dp"
         android:text="@string/share"
@@ -50,15 +49,13 @@
         app:layout_constraintRight_toLeftOf="@id/guideline" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/nextMeme"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:padding="32dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginLeft="3dp"
-        android:background="#333333"
+        android:layout_margin=".1dp"
+        android:background="#3b5998"
         android:textColor="#FFFFFF"
         app:layout_constraintLeft_toRightOf="@id/guideline"
         app:layout_constraintRight_toRightOf="parent"

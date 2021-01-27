@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun loadMeme(){
         progressBar.visibility=View.VISIBLE
+        shareMeme.visibility = View.GONE
+        nextMeme.visibility = View.GONE
         val url = "  https://meme-api.herokuapp.com/gimme"
 
         val jsonObjectRequest = JsonObjectRequest(
@@ -51,6 +53,8 @@ class MainActivity : AppCompatActivity() {
                             Boolean {
 
                         progressBar.visibility = View.GONE
+                        shareMeme.visibility = View.GONE
+                        nextMeme.visibility = View.VISIBLE
                         return false
 
                     }
@@ -58,6 +62,8 @@ class MainActivity : AppCompatActivity() {
                     override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean):
                             Boolean {
                         progressBar.visibility = View.GONE
+                        shareMeme.visibility = View.VISIBLE
+                        nextMeme.visibility = View.VISIBLE
                         return false
                     }
 
