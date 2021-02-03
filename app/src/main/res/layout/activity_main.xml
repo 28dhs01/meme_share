@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_margin=".1dp"
         android:background="#3b5998"
-        android:onClick="shareMeme"
+
         android:padding="32dp"
         android:text="@string/share"
         android:textColor="#FFFFFF"
