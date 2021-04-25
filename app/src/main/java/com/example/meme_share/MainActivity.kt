@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         progressBar.visibility=View.VISIBLE
         shareMeme.visibility = View.GONE
         nextMeme.visibility = View.GONE
-        val url = "  https://meme-api.herokuapp.com/gimme"
+        val url = "https://reddit-meme-api.herokuapp.com/"
 
         val jsonObjectRequest = JsonObjectRequest(
                 Request.Method.GET,
@@ -63,9 +63,11 @@ class MainActivity : AppCompatActivity() {
                         isFirstResource: Boolean):
                             Boolean {
 
-                        progressBar.visibility = View.GONE
-                        shareMeme.visibility = View.GONE
-                        nextMeme.visibility = View.VISIBLE
+//                        progressBar.visibility = View.GONE
+//                        shareMeme.visibility = View.GONE
+//                        nextMeme.visibility = View.VISIBLE
+                          loadMeme()
+
                         return false
 
                     }
@@ -91,7 +93,11 @@ class MainActivity : AppCompatActivity() {
 
             },
             { error ->
-                Toast.makeText(this,"something went wrong", Toast.LENGTH_LONG).show()
+//                progressBar.visibility = View.GONE
+//                shareMeme.visibility = View.GONE
+//                nextMeme.visibility = View.VISIBLE
+//                Toast.makeText(this,"something went wrong", Toast.LENGTH_LONG).show()
+               loadMeme()
             }
         )
 

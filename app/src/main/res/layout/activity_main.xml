@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/dark_mode"
     tools:context=".MainActivity">
 
 
@@ -13,8 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="#333333"
-        android:layout_margin=".1dp"
+        android:layout_margin=".001dp"
 
         android:scaleType="fitXY"
 
@@ -22,7 +21,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -39,11 +39,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin=".1dp"
-        android:background="#3b5998"
-
         android:padding="32dp"
         android:text="@string/share"
-        android:textColor="#FFFFFF"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/guideline" />
@@ -55,8 +54,8 @@
         android:text="@string/next"
         android:padding="32dp"
         android:layout_margin=".1dp"
-        android:background="#3b5998"
-        android:textColor="#FFFFFF"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintLeft_toRightOf="@id/guideline"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
